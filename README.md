@@ -1,3 +1,3 @@
-Glazer 3S Home Page
+# Glazer 3S LLC
 
-# JasonGlazer.github.io
+Welcome to my first Github page
