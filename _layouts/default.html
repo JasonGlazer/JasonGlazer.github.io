@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#1E3448">
-    <link rel="icon" type="image/svg+xml" href="{{ '/images/logo.svg' | relative_url }}">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
     <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
 
@@ -13,11 +15,20 @@
     {% include head-custom.html %}
     <style>
       /* Glazer3S additions on top of the Architect theme */
+      header .site-title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 10px;
+        text-decoration: none;
+      }
+      header .site-title h1 { margin: 0; }
       header .site-logo {
         display: block;
+        flex: none;
         width: 64px;
         height: 64px;
-        margin-bottom: 12px;
       }
       header a.button.contact-button {
         background: #E39B2D;
@@ -44,7 +55,7 @@
   <body>
     <header>
       <div class="inner">
-        <a href="{{ '/' | absolute_url }}">
+        <a class="site-title" href="{{ '/' | absolute_url }}">
           <img class="site-logo" src="{{ '/images/logo.svg' | relative_url }}" alt="Glazer3S logo">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
         </a>
